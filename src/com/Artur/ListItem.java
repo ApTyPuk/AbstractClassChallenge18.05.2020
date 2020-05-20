@@ -12,7 +12,6 @@ public abstract class ListItem {
         this.parameter = parameter;
     }
 
-
     public String getParameter() {
         return parameter;
     }
@@ -39,10 +38,11 @@ public abstract class ListItem {
 
 
 
-    public void nextItem(){
-    }
-    public void previousItem(){
-    }
+//    public void nextItem(){
+//    }
+//    public void previousItem(){
+//    }
+
     public int compareTo(ListItem listItem){
         return this.parameter.compareTo(listItem.getParameter());
     }
