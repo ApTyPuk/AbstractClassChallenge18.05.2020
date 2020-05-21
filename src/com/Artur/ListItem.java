@@ -3,51 +3,27 @@ package com.Artur;
 import java.util.List;
 
 public abstract class ListItem {
-    String parameter;
+    Object value;
 
     ListItem nextItem;
     ListItem previousItem;
 
-    public ListItem(String parameter) {
-        this.parameter = parameter;
+    public ListItem(String value) {
+        this.value = value;
     }
 
-    public String getParameter() {
-        return parameter;
+    abstract ListItem next();
+    abstract ListItem setNext(ListItem item);
+    abstract ListItem previous();
+    abstract ListItem setPrevious(ListItem item);
+
+    abstract int compareTo(ListItem item);
+
+    public Object getValue() {
+        return value;
     }
 
-    public void setParameter(String parameter) {
-        this.parameter = parameter;
+    public void setValue(Object value) {
+        this.value = value;
     }
-
-    public ListItem getNextItem() {
-        return nextItem;
-    }
-
-    public void setNextItem(ListItem nextItem) {
-        this.nextItem = nextItem;
-    }
-
-    public ListItem getPreviousItem() {
-        return previousItem;
-    }
-
-    public void setPreviousItem(ListItem previousItem) {
-        this.previousItem = previousItem;
-    }
-
-
-
-//    public void nextItem(){
-//    }
-//    public void previousItem(){
-//    }
-
-    public int compareTo(ListItem listItem){
-        return this.parameter.compareTo(listItem.getParameter());
-    }
-
-
-
-
 }
